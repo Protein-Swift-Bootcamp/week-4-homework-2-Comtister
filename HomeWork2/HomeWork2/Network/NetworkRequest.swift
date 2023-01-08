@@ -30,9 +30,13 @@ class NetworkRequest {
         return body.isEmpty ? RequestHttpMethod.GET : RequestHttpMethod.POST
     }
     
+    var httpHeaders: [String: String] {
+        return [:]
+    }
+    
     var body : [String : Any]{
-            return [:]
-        }
+        return [:]
+    }
     
     func requestModel() -> URLRequest?{
             
@@ -46,9 +50,13 @@ class NetworkRequest {
             urlComponents?.queryItems = queryParameters.map({ (key,value) -> URLQueryItem in
                 URLQueryItem(name: key, value: value as? String)
             })
-            
+        
             var urlRequest = URLRequest(url: (urlComponents?.url)!)
             
+            httpHeaders.forEach { key, value in
+                urlRequest.addValue(value, forHTTPHeaderField: key)
+            }
+        
             if method == RequestHttpMethod.POST{
                 
                 do{

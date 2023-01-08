@@ -17,7 +17,7 @@ class ServiceManager{
     func sendRequestDefault<T : Codable>(request : NetworkRequest , completion : @escaping (Result<T,ApiError>) -> Void) {
         
         guard request.requestModel() != nil else { completion(Result.failure(ApiError(message: "İsteğinizi Gerçekleştiremiyoruz."))) ; return }
-        
+        print(request.httpHeaders)
         URLSession.shared.dataTask(with: request.requestModel()!) { (data, response, error) in
             
             guard error == nil else { completion(Result.failure(ApiError(message: "İsteğinizi Gerçekleştiremiyoruz."))) ; return }

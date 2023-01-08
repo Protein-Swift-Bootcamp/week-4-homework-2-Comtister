@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController" customModule="HomeWork2" customModuleProvider="target">
+            <connections>
+                <outlet property="countryImageView" destination="d4l-KO-lCj" id="c43-6c-KEy"/>
+                <outlet property="countryLbl" destination="Zdm-QT-6FB" id="my2-gC-YBZ"/>
+                <outlet property="view" destination="NFs-VE-0tu" id="q7Z-dO-cIB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NFs-VE-0tu">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4l-KO-lCj">
+                    <rect key="frame" x="0.0" y="44" width="414" height="224"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdm-QT-6FB">
+                    <rect key="frame" x="182" y="292" width="50" height="25.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="GOt-DQ-t6Z"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="d4l-KO-lCj" firstAttribute="leading" secondItem="GOt-DQ-t6Z" secondAttribute="leading" id="5ej-iH-qFf"/>
+                <constraint firstItem="d4l-KO-lCj" firstAttribute="height" secondItem="NFs-VE-0tu" secondAttribute="height" multiplier="0.25" id="7PG-vf-iE0"/>
+                <constraint firstItem="Zdm-QT-6FB" firstAttribute="top" secondItem="d4l-KO-lCj" secondAttribute="bottom" constant="24" id="Pob-8f-tCn"/>
+                <constraint firstItem="GOt-DQ-t6Z" firstAttribute="trailing" secondItem="d4l-KO-lCj" secondAttribute="trailing" id="bcY-QN-WVV"/>
+                <constraint firstItem="Zdm-QT-6FB" firstAttribute="centerX" secondItem="NFs-VE-0tu" secondAttribute="centerX" id="fje-TS-pc0"/>
+                <constraint firstItem="d4l-KO-lCj" firstAttribute="top" secondItem="GOt-DQ-t6Z" secondAttribute="top" id="tOq-cj-2sb"/>
+            </constraints>
+            <point key="canvasLocation" x="-6" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
